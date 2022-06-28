@@ -1,5 +1,15 @@
 {
   "header": {
     "title": "Forms"
+  },
+  "form": {
+    "required": "Required",
+    "firstName": "Must be 15 characters or less",
+    "lastName": "Must be 20 characters or less",
+    "email": "Invalid email address",
+    "submit": "Submit",
+    "firstNameInput": "First Name",
+    "lastNameInput": "Last Name",
+    "emeilInput": "Email"
   }
 }

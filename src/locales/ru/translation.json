@@ -1,5 +1,15 @@
 {
   "header": {
     "title": "Формы"
+  },
+  "form": {
+    "required": "Обязательное поле",
+    "firstName": "Имя должно быть короче 15 символов",
+    "lastName": "Фамилия должна быть короче 20 символов",
+    "email": "Некорректный Email",
+    "submit": "Отправить",
+    "firstNameInput": "Имя",
+    "lastNameInput": "Фамилия",
+    "emeilInput": "Email"
   }
 }
