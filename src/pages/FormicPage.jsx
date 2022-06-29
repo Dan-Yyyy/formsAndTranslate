@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import "./../utils/i18n";
 
 import CustomInput from "./../components/CustomInput/CustomInput";
+import SecondTitle from "../styled/SecondTitle";
+import Error from './../styled/Error';
 import Button from "../styled/Button";
 import styled from "styled-components";
 
@@ -16,18 +18,11 @@ const LabelContainer = styled.div`
   position: relative;
 `;
 
-const Error = styled.div`
-  position: absolute;
-  top: 26px;
-  font-size: 12px;
-  color: red;
-`;
-
 export const FormicPage = () => {
 
   const { t } = useTranslation();
 
-  const validate = values => {
+  const validate = (values) => {
 
     const errors = {};
     if (!values.firstName) {
@@ -61,10 +56,11 @@ export const FormicPage = () => {
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     },
-  });
+  }, t);
 
   return (
     <FormicForm onSubmit={formik.handleSubmit}>
+      <SecondTitle>{t("formik")}</SecondTitle>
       <LabelContainer>
         <CustomInput id="firstName" 
           handleBlur={formik.handleBlur} handleChange={formik.handleChange} 
@@ -83,7 +79,7 @@ export const FormicPage = () => {
           value={formik.values.email} textLabel={t("form.emeilInput")}/>
           {formik.touched.email && formik.errors.email ? <Error>{formik.errors.email}</Error> : null}
       </LabelContainer>
-      <Button type="submit" disabled={formik.isValid}>{t("form.submit")}</Button>
+      <Button type="submit" disabled={!formik.isValid}>{t("form.submit")}</Button>
     </FormicForm>
   );
 }

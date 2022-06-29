@@ -11,5 +11,7 @@
     "firstNameInput": "Имя",
     "lastNameInput": "Фамилия",
     "emeilInput": "Email"
-  }
+  },
+  "formik": "Формик",
+  "hookForm": "Хук форма"
 }

@@ -11,5 +11,7 @@
     "firstNameInput": "First Name",
     "lastNameInput": "Last Name",
     "emeilInput": "Email"
-  }
+  },
+  "formik": "Formik",
+  "hookForm": "Hook Form"
 }

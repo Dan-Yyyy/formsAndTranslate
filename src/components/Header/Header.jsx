@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Title from "./../../styled/Title";
 import Select from "../Select/Select";
@@ -26,7 +27,9 @@ export const Header = () => {
   return(
     <HeaderWrapper>  
       <HeaderContainer>
-        <Title>{t("header.title")}</Title>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <Title>{t("header.title")}</Title>
+        </Link>
         <Select/>
       </HeaderContainer>
     </HeaderWrapper>

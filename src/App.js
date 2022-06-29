@@ -8,6 +8,8 @@ import './App.css';
 import Wrapper from "./components/Wrapper/Wrapper";
 import { Header } from "./components/Header/Header";
 import { FormicPage } from "./pages/FormicPage";
+import HookFormPage from "./pages/HookFormPage";
+import IndexPage from "./pages/IndexPage";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
             <Header />
             <Wrapper>
               <Routes>
+                <Route path="/" element={<IndexPage />}/>
                 <Route path="formicPage" element={<FormicPage />}/>
+                <Route path="hookFormPage" element={<HookFormPage />}/>
               </Routes>
             </Wrapper>
         </BrowserRouter>
